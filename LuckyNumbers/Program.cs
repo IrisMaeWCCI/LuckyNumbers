@@ -37,14 +37,17 @@ namespace LuckyNumbers
 
                 GuessingNumberArray[i] = userNumber;
             }
+            //Throwing in my Random
             Random random = new Random();
             int[] LuckyNumbers = new int [6];
+            //my first loop
             for (int i = 0; i<=5; i++)
             {
                 LuckyNumbers[i] = random.Next(startNumber, endNumber+1);
 
             }
-            foreach(int number in LuckyNumbers)
+            //my second nested loop
+            foreach (int number in LuckyNumbers)
             {
                 Console.WriteLine("Lucky Number : " + number);
             }
@@ -62,6 +65,7 @@ namespace LuckyNumbers
                     }
                 }
             }
+            //jackpot and if statement
             Console.WriteLine("You have guessed: "+guessedCorrectly+" correctly");
 
             if (guessedCorrectly == 0)
